@@ -1,7 +1,7 @@
 package.com.example.demo.service.impl;
 
 
-@service
+@Service
 public class studentServiceImpl implements studentService{
     
 }
