@@ -21,6 +21,10 @@ public class studentServiceImpl implements studentService {
         return repo.findAll();
     }
 
+    public studentEntity addStudent(studentEntity student){
+        return repo.save(student);
+    }
+
 //     @Override
 //     public studentEntity addStudent(studentEntity stu) {
 //    return repo.save(stu);
@@ -61,4 +65,4 @@ public class studentServiceImpl implements studentService {
    
 //     return "Student not found";
 // }
-   }
+}
