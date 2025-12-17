@@ -23,10 +23,15 @@ import java.util.List;
 @RestController
 public class studentController {
 
+
+@Autowired
+studentService service;
+
 @GetMapping("/getAllStudent")l
 public List<studentEntity> getAll(){
-
-
+      return service.getAll();
    }
-
+  
+  @PostMapping("/add")
+  public studentEntity addStudent(@Valid @Requestody studentEntity)
 }
