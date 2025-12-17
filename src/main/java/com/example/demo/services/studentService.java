@@ -1,10 +1,11 @@
 package com.example.demo.service;
 
 import com.example.demo.entity.studentEntity;
+import com.example.demo.entity.*;
 
-public interface studentService {
+ interface studentService {
     List<studentEntity> getAll();
 
-    String updateStudent(Long id, studentEntity newstu);
+    studentEntity addStudent(studentEntity student);
 
 }
