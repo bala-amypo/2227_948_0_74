@@ -36,8 +36,7 @@ public class studentController {
 
     @PutMapping("/update/{id}")
     public String updateStudent(
-            @PathVariable Long id,
-            @RequestBody studentEntity student) {
+            @PathVariable Long id,  @RequestBody studentEntity student) {
         return service.updateStudent(id, student);
     }
 
