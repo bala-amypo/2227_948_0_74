@@ -13,6 +13,7 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @RestController
+@RequestMapping("/student")
 public class studentController {
 
     @Autowired
@@ -24,8 +25,7 @@ public class studentController {
     }
 
     @PostMapping("/add")
-    public studentEntity addStudent(
-            @Valid @RequestBody studentEntity student) {
+    public studentEntity addStudent(@Valid @RequestBody studentEntity student) {
         return service.addStudent(student);
     }
 
@@ -35,8 +35,7 @@ public class studentController {
     }
 
     @PutMapping("/update/{id}")
-    public String updateStudent(
-            @PathVariable Long id,  @RequestBody studentEntity student) {
+    public String updateStudent(@PathVariable Long id,  @RequestBody studentEntity student) {
         return service.updateStudent(id, student);
     }
 
