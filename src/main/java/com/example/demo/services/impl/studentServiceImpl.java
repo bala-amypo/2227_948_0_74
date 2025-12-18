@@ -61,6 +61,6 @@ public class studentServiceImpl implements studentService {
 
         studentEntity existing = getById(id);
         repo.deleteById(id);
-        return "Student deleted Successfully"
+        return "Student deleted Successfully";
     }
 }
