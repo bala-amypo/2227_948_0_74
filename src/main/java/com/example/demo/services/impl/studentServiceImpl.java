@@ -60,7 +60,7 @@ public class studentServiceImpl implements studentService {
         // return "Student not found";
 
         studentEntity existing = getById(id);
-        return newstu.deleteById(id);
-           
+        repo.deleteById(id);
+        return "Student deleted Successfully"
     }
 }

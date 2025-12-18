@@ -20,8 +20,7 @@ public class globalExceptionHandler {
 
         ex.getBindingResult()
           .getFieldErrors()
-          .forEach(err ->
-              error.put(err.getField(), err.getDefaultMessage())
+          .forEach(err ->  error.put(err.getField(), err.getDefaultMessage())
           );
 
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
@@ -29,7 +28,7 @@ public class globalExceptionHandler {
 
     @ExceptionHandler(StudentNotFoundException.class)
     public ResponseEntity<?> handleStudentNotValid(StudentNotFoundException ex){
-           return ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
+           return ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND));
     }  
 }
 
@@ -37,24 +36,5 @@ public class globalExceptionHandler {
 
 
 
-// package com.example.demo.exception;
-
-// import org.springframework.web.bind.annotation.*;
-// import org.springframework.web.bind.MethodArgumentNotValidException;
-// import java.util.*;
-// import org.springframework.http.ResponseEntity;
-// import org.springframework.http.HttpStatus;
 
 
-// @RestControllerAdvice
-// public class globalExceptionHandler{
-    
-
-//     @ExceptionHandler(MethodArgumentNotValidException.class)
-//     public ResponseEntity<?> handleFieldError(MethodArgumentNotValidException){
-//         Map<String,String> error = new HashMap<>();
-//         ex.getBindingResult().getFieldsError().forEach(err- > error.put(ex.getField(),ex.getDefaultMessage()));
-
-//         return new ResponseEntity<>(error,HttpStatus.BAD_REQUEST);
-//      }
-//  }
