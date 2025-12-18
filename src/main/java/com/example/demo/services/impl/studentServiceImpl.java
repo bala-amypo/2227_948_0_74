@@ -47,16 +47,20 @@ public class studentServiceImpl implements studentService {
         // return "Student not found";
         
         studentEntity existing = getById(id);
-        
-        return "Student updated successfully";
+        newstu.setId(existing.getid()); //newstu.setId(id);
+        return repo.save(newStu);
     }
 
     @Override
     public String deleteStudent(long id) {
-        if (repo.existsById(id)) {
-            repo.deleteById(id);
-            return "Student deleted";
-        }
-        return "Student not found";
+        // if (repo.existsById(id)) {
+        //     repo.deleteById(id);
+        //     return "Student deleted";
+        // }
+        // return "Student not found";
+
+        studentEntity existing = getById(id);
+        return newstu.deleteById(id);
+           
     }
 }
