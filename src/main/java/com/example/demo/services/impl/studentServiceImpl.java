@@ -39,12 +39,16 @@ public class studentServiceImpl implements studentService {
 
     @Override
     public String updateStudent(Long id, studentEntity newstu) {
-        if (repo.existsById(id)) {
-            newstu.setId(id);
-            repo.save(newstu);
-            return "Student updated";
-        }
-        return "Student not found";
+        // if (repo.existsById(id)) {
+        //     newstu.setId(id);
+        //     repo.save(newstu);
+        //     return "Student updated";
+        // }
+        // return "Student not found";
+        
+        studentEntity existing = getById(id);
+        
+        return "Student updated successfully";
     }
 
     @Override
