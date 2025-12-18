@@ -38,7 +38,7 @@ public class studentServiceImpl implements studentService {
     }
 
     @Override
-    public String updateStudent(Long id, studentEntity newstu) {
+    public studentEntity updateStudent(Long id, studentEntity newstu) {
         // if (repo.existsById(id)) {
         //     newstu.setId(id);
         //     repo.save(newstu);
@@ -47,8 +47,8 @@ public class studentServiceImpl implements studentService {
         // return "Student not found";
         
         studentEntity existing = getById(id);
-        newstu.setId(existing.getid()); //newstu.setId(id);
-        return repo.save(newStu);
+        newstu.setId(existing.getId()); //newstu.setId(id);
+        return repo.save(newstu);
     }
 
     @Override
