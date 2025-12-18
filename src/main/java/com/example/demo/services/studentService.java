@@ -1,14 +1,4 @@
-// package com.example.demo.service;
 
-// import com.example.demo.entity.studentEntity;
-// import com.example.demo.entity.*;
-
-//  interface studentService {
-//     List<studentEntity> getAll();
-
-//     studentEntity addStudent(studentEntity student);
-
-// }
 
 package com.example.demo.service;
 
@@ -28,3 +18,14 @@ public interface studentService {
     String deleteStudent(long id);
 }
 
+// package com.example.demo.service;
+
+// import com.example.demo.entity.studentEntity;
+// import com.example.demo.entity.*;
+
+//  interface studentService {
+//     List<studentEntity> getAll();
+
+//     studentEntity addStudent(studentEntity student);
+
+// }
